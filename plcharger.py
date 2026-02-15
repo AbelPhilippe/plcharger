@@ -328,7 +328,6 @@ def main():
 
         info("Payload loaded")
 
-        # PNG Mode
         if args.png:
 
             if not is_png(args.png):
@@ -355,6 +354,7 @@ def main():
             print(f"-------------------------")
             print(f"{Fore.GREEN}# Copy this to Python:{Fore.RESET}")
             print(f"{Fore.CYAN}MARKED_IDAT_HASH = 0x{int.from_bytes(crc,'big'):X}{Fore.RESET}")
+             
         elif args.jpeg:
             if not is_jpeg(args.jpeg):
                 error("Invalid JPEG file")
@@ -371,8 +371,6 @@ def main():
 
             success(f"Output: {args.output}")
         
-
-        # PDF Mode
         elif args.pdf:
 
             if not is_pdf(args.pdf):
