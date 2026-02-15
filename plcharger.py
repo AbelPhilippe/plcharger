@@ -316,7 +316,6 @@ def main():
 
         args, unknown = parse_args()
 
-        # Sem argumentos → só banner
         if len(sys.argv) == 1:
             print_banner()
             sys.exit(0)
@@ -325,11 +324,9 @@ def main():
         if args.help:
             show_help()
 
-        # Falta argumento obrigatório
         if not args.input or not args.output:
             show_help()
 
-        # Sempre mostra banner antes de executar
         print_banner()
 
         payload = read_file(args.input)
