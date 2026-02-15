@@ -1,8 +1,3 @@
-# ==========================================================
-# Payload Embedder (Charger)
-# Author: Abel Philippe
-# ==========================================================
-
 import os
 import sys
 import argparse
